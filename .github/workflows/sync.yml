@@ -2,10 +2,11 @@ name: Sync Upstream
 
 permissions: write-all              # grant write permission
 
-on: 
+on:
   schedule:
-    - cron: '0 0 * * *'             # scheduled for 00:00 every Monday
-  workflow_dispatch:                # trigger manually
+    - cron: '*/30 * * * *'  # 每 30 分钟运行一次
+  workflow_dispatch:
+
 
 jobs:
   sync-upstream:
